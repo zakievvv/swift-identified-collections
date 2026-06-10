@@ -4,6 +4,17 @@ import PackageDescription
 
 let package = Package(
   name: "swift-identified-collections",
+  // Xcode 27 / SPM compatibility — see the matching comment in
+  // zakievvv/swift-collections's Package.swift. Without an explicit
+  // `platforms:` declaration, SPM falls back to its hardcoded 8.0 default
+  // for watchOS and Xcode 27 refuses to resolve. Consumer-side overrides
+  // don't propagate to SPM-embedded projects, so the floor lives here.
+  platforms: [
+    .iOS(.v13),
+    .macOS(.v10_15),
+    .tvOS(.v13),
+    .watchOS(.v6),
+  ],
   products: [
     .library(
       name: "IdentifiedCollections",
