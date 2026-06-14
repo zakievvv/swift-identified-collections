@@ -1,3 +1,31 @@
+> ## FlowPulse-owned fork
+>
+> This is **not** the upstream `pointfreeco/swift-identified-collections` repository.
+>
+> [@zakievvv](https://github.com/zakievvv) maintains this fork solely to
+> keep the [FlowPulse](https://github.com/zakievvv/FlowPulse) iOS / macOS /
+> watchOS / tvOS / visionOS app building under **Xcode 27 beta 1 +
+> Swift 6.4**, by patching a specific compile error that upstream's own
+> Xcode 27 PRs did not address.
+>
+> **Full rationale, verification, patch description, and retirement
+> conditions:** [https://github.com/zakievvv/swift-identified-collections/issues/1](https://github.com/zakievvv/swift-identified-collections/issues/1)
+>
+> The patch lives on branch
+> [`flowpulse-xcode-27-platforms`](../../tree/flowpulse-xcode-27-platforms) at commit
+> [`01fc913f`](../../commit/01fc913fb3aac16f8ec6c739ad23f96116642beb).
+>
+> FlowPulse consumes this fork transparently via SwiftPM mirror
+> configuration. If you found this repo by accident and you're not
+> working on FlowPulse, you almost certainly want **the upstream**:
+> [`pointfreeco/swift-identified-collections`](https://github.com/pointfreeco/swift-identified-collections).
+>
+> **No issues or PRs will be opened on `pointfreeco/swift-identified-collections` as part of this
+> work** — this fork is a self-contained, `zakievvv/*`-scoped workaround,
+> not a fix that's being negotiated upstream.
+
+---
+
 # Swift Identified Collections
 
 [![CI](https://github.com/pointfreeco/swift-identified-collections/workflows/CI/badge.svg)](https://actions-badge.atrox.dev/pointfreeco/swift-identified-collections/goto)
